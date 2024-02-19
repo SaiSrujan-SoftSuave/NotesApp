@@ -70,7 +70,7 @@ class EditNoteFragment : Fragment(R.layout.fragment_edit_note), MenuProvider {
 private fun deleteNote(){
     AlertDialog.Builder(activity).apply {
         setTitle("Delete Note")
-        setMessage("Do you want to dlete this note?")
+        setMessage("Do you want to delete this note?")
         setPositiveButton("Delete"){_,_ ->
             notesViewModel.deleteNote(currentNote)
             Toast.makeText(context,"Note is deleted",Toast.LENGTH_SHORT).show()
