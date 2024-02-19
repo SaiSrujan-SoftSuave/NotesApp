@@ -1,5 +1,6 @@
 package com.example.notesapp.adapter
 
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.navigation.findNavController
@@ -27,7 +28,9 @@ class NoteAdapter : RecyclerView.Adapter<NoteAdapter.NoteViewHolder>() {
         }
     }
     val differ = AsyncListDiffer(this, differCallback)
+
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): NoteViewHolder {
+        Log.d("NoteAdapter","$differ")
         return NoteViewHolder(
             NoteLayoutBinding.inflate(
                 LayoutInflater.from(parent.context),
